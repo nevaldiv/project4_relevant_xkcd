@@ -1,5 +1,5 @@
 //all characters, parsed #1-403, and 405-1662 (404 not included because it breaks code)
-
+var allcomics = [
   { month: '1',
     num: 1,
     link: '',
@@ -18262,3 +18262,5 @@
     img: 'http://imgs.xkcd.com/comics/jack_and_jill.png',
     title: 'Jack and Jill',
     day: '30' },
+];
+
