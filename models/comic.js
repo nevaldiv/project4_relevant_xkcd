@@ -8,6 +8,7 @@ var comicSchema = new mongoose.Schema({
   alt:         { type: String },
   transcript:  { type: String },
   month:       { type: Number },
+  year:        { type: Number },
   votecount:   { type: Number, default: 100 },
   viewcount:   { type: Number, default: 0 }
 
