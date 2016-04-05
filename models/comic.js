@@ -2,11 +2,13 @@ var mongoose = require('mongoose'),
     debug    = require('debug')('app:models');
 
 var comicSchema = new mongoose.Schema({
-  title:       { type: String, default: "" },
+  title:       { type: String },
   num:         { type: Number },
   img:         { type: String },
-  // img:         { type: String, default: "/images/notfound2.gif" },
-  description: { type: String, default: "" },
+  alt:         { type: String },
+  description: { type: String },
+  month:       { type: Number },
+  year:        { type: Number }
 
 });
 
