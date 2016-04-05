@@ -6,9 +6,10 @@ var comicSchema = new mongoose.Schema({
   num:         { type: Number },
   img:         { type: String },
   alt:         { type: String },
-  description: { type: String },
+  transcript:  { type: String },
   month:       { type: Number },
-  year:        { type: Number }
+  votecount:   { type: Number, default: 100 },
+  viewcount:   { type: Number, default: 0 }
 
 });
 
