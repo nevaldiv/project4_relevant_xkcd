@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
-  <title>Nelsons XKCD App</title>
+  <title>Nelson XKCD App</title>
   <meta charset="utf-8">
 
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
@@ -20,7 +20,7 @@
     <header ng-controller="NavbarController as vm">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-          <!-- <a ui-sref="welcome" class="navbar-brand"><img src="/images/token-symbol.png" width="40" height="40"></a> -->
+          <a ui-sref="welcome" class="navbar-brand"><img src="/images/token-symbol.jpg" width="60" height="40"></a>
           <div class="pull-right">
             <button ng-show="vm.authService.isLoggedIn();" ui-sref="profile" type="button" class="btn btn-default navbar-btn"><i class="glyphicon glyphicon-cog"></i> Profile</button>
             <button ng-hide="vm.authService.isLoggedIn();" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
@@ -31,8 +31,10 @@
     </header>
 
     <main class="content" ui-view>
+
       <!-- ui-router (aka ui.router) inserts templates here -->
     </main>
+    <div>{{1+2}}</div>
   </div> <!-- div.container-fluid -->
 
   <footer>
@@ -43,6 +45,17 @@
   </footer>
 
   <script src="/js/app/app.module.js"></script>
-  <script src="/js/app/app.routes.js"></script>
+  <script src="/js/app/config/app.debug.js"></script>
+  <script src="/js/app/config/app.httpInterceptors.js"></script>
+  <script src="/js/app/config/app.routes.js"></script>
+  <script src="/js/app/config/jsonHeaders.service.js"></script>
+  <script src="/js/app/config/tokenSigning.service.js"></script>
+  <script src="/js/app/config/authErrorRedirect.service.js"></script>
+  <script src="/js/app/layouts/navbar.controller.js"></script>
+  <script src="/js/app/auth/token.service.js"></script>
+  <script src="/js/app/auth/auth.service.js"></script>
+  <script src="/js/app/auth/signin.controller.js"></script>
+  <script src="/js/app/users/user.service.js"></script>
+  <script src="/js/app/users/profile.controller.js"></script>
 </body>
 </html>

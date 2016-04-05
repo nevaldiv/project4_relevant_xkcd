@@ -12,7 +12,7 @@ var cookieParser = require('cookie-parser');
 
 // Load local libraries.
 var env      = require('./config/environment'),
-    mongoose = require('./config/database'),
+    mongoose = require('./config/database');
     routes   = require('./routes/api_routes');
 
 // Instantiate a server application.
