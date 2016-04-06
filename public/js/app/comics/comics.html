@@ -1,20 +1,24 @@
 <div class="comics-container" ng-controller="MainController as vm">
-  <br>
-  <h1>Welcome to Nelsons XKCD App</h1>
-  <p>Below will go the app's contents.</p>
-    <div class="col-xs-6">
-      <!-- Dropdown to select city -->
-      <label>City</label>
-      <select class="form-control" ng-model="vm.selectedCity" ng-options="city for city in vm.cities"></select>
-    </div>
-    <div class="col-xs-6">
-      <!-- Search field  -->
-      <label>Search</label>
-      <input type="search" class="form-control" ng-model="vm.search" placeholder="search...">
-    </div>
-  </div>
-  <table class="table table-striped">
-    <thead>
+    <section>
+      <h1>Welcome to Nelsons XKCD App</h1>
+      <p>Below will go the app's contents.</p>
+
+   <!--      <div class="col-xs-6">
+          <label>City</label>
+          <select class="form-control" ng-model="vm.selectedCity" ng-options="city for city in vm.cities"></select>
+        </div> -->
+        <p class="col-xs-12">
+          <!-- Search field  -->
+          <label>Search</label>
+          <input type="search" class="form-control" ng-model="vm.search" placeholder="search...">
+        </p>
+    </section>
+    <br>
+    <br>
+
+
+  <!-- <table class="table table-striped"> -->
+<!--     <thead>
       <tr>
         <th>Name</th>
         <th>City</th>
@@ -23,14 +27,16 @@
         <th class="text-right">Funds</th>
       </tr>
     </thead>
-    <tbody>
-      <tr ng-repeat="client in vm.clients">
-        <td>{{client.name}}</td>
-        <td>{{client.city}}</td>
-        <td>{{client.bio}}</td>
-        <td>{{client.date}}</td>
-        <td class="text-right">{{client.funds}}</td>
-      </tr>
-    </tbody>
+ -->
+ <!-- <tbody> -->
+      <div ng-repeat="client in vm.clients | filter:vm.search">
+      <hr>
+        <p><strong>{{client.name | uppercase}}</strong></p>
+        <div>{{client.bio}}</div>
+        <p>{{client.date}}</p>
+        <span>{{client.city}}</span> -
+        <span>{{client.funds}}</span>
+      </div>
+    <!-- </tbody> -->
   </table>
 </div>
