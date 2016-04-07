@@ -12,7 +12,7 @@
       .state("welcome", {
         url:         "/",
         templateUrl: "/js/app/comics/comics.html",
-        controller:   "MainController",
+        controller:   "ComicController",
         controllerAs: "vm"
       })
       .state("signin", {
