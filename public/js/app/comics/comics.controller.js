@@ -21,6 +21,21 @@
 
     vm.getComics();
 
+    vm.updateComic = function(comic, votecountBoolean){
+      if (votecountBoolean === false) {
+        comic.votecount--;
+      } else if (votecountBoolean === true) {
+        comic.votecount++;
+      }
+      $http.put(`/api/comics/${comic._id}`, comic)
+        .then(function(resp){
+          $log.info(resp);
+          vm.getComics();
+        }, function(err){
+          $log.info(err);
+        })
+    }
+
   }
 
 })();
