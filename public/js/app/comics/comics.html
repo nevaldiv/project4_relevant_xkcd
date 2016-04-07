@@ -12,6 +12,10 @@
     <br>
       <div ng-repeat="comic in vm.comics | filter: vm.search">
       <hr>
+      <div class="vote">
+         <img alt="^" title="vote up"   src="../../images/upvote.png" ng-click="vm.updateComic(comic, true);"/>
+         <img alt="v" title="vote down" src="../../images/downvote.png" ng-click="vm.updateComic(comic, false);"/>
+      </div>
        <div class="guts">
           <p><strong>{{comic.title | uppercase}}</strong></p>
           <img src="{{comic.img}}">
