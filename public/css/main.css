@@ -73,3 +73,9 @@ form {
 #exampleInputEmail1.red-border {
   border: 2px solid red;
 }
+
+#comicplaceholder {
+  background-color: red;
+  height: 200px;
+  width: 400px;
+}

@@ -18,7 +18,9 @@
       </div>
        <div class="guts">
           <p><strong>{{comic.title | uppercase}}</strong></p>
-          <img src="{{comic.img}}">
+          <!-- disabling comic-image load for now, until I can get inifite-scroll to work, loading too many images.-->
+          <!-- <img src="{{comic.img}}"> -->
+          <img id="comicplaceholder"></div>
           <p>{{comic.alt}}</p>
           <p>
           <small>Month: {{comic.month}}</small> -

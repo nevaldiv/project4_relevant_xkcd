@@ -1,4 +1,4 @@
-//all characters, parsed #1-403, and 405-1662 (404 not included because it breaks code)
+//all comics, parsed. #1-403, and 405-1662 (404 not included because it breaks code, very funny Randall Munroe, thats 3 hours ill never get back)
 var allcomics = [
   { month: '1',
     num: 1,
