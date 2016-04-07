@@ -1,4 +1,5 @@
 var mongoose = require('mongoose'),
+    User     = require("./user.js"),
     debug    = require('debug')('app:models');
 
 var comicSchema = new mongoose.Schema({
@@ -10,8 +11,8 @@ var comicSchema = new mongoose.Schema({
   month:       { type: Number },
   year:        { type: Number },
   votecount:   { type: Number, default: 100 },
-  viewcount:   { type: Number, default: 0 }
-
+  viewcount:   { type: Number, default: 0 },
+  user:        { type: mongoose.Schema.Types.ObjectId, ref:'User' }
 });
 
 var Comic = mongoose.model('Comic', comicSchema);
