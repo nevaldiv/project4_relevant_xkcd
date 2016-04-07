@@ -4,14 +4,22 @@
   angular.module('app')
     .controller('MainController', MainController);
 
-  MainController.$inject = ["comicData"];
+  MainController.$inject = ["comicData", "$http", "$log"];
 
-  function MainController(clientData) {
+  function MainController(comicData, $http, $log) {
+    $log.info("ComicController linked!");
     var vm = this;
 
-    vm.clients = clientData.clients;
-    vm.cities = clientData.cities;
-    vm.selectedCity = vm.cities[0];
+    vm.getComics = function() {
+      comicData
+      .show()
+      .then(function(comics){
+        $log.info(comics.data);
+        vm.comics = comics.data;
+      });
+    }
+
+    vm.getComics();
 
   }
 
