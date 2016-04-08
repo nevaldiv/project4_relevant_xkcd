@@ -7,8 +7,10 @@
   ComicController.$inject = ["comicData", "$http", "$log"];
 
   function ComicController(comicData, $http, $log) {
+
     $log.info("ComicController linked!");
     var vm = this;
+
 
     vm.getComics = function() {
       comicData
@@ -20,6 +22,7 @@
     }
 
     vm.getComics();
+
 
     vm.updateComic = function(comic, votecountBoolean){
       if (votecountBoolean === false) {

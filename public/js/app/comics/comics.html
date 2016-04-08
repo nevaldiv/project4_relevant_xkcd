@@ -4,13 +4,15 @@
         <p class="col-xs-12">
           <!-- Search field  -->
           <label>Search</label>
-          <input type="search" class="form-control" ng-model="vm.search" placeholder="Keywords from the comic you are searching for...">
+<!--           <input type="checkbox" data-ng-model='search.type1' data-ng-true-value='luxury' data-ng-false-value='' /> Luxury &nbsp;&nbsp;&nbsp;
+          <input type="checkbox" data-ng-model='search.type2' data-ng-true-value='double suite' data-ng-false-value='' /> Double suite
+ -->          <input type="search" class="form-control" ng-model="vm.search" placeholder="Keywords from the comic you are searching for...">
         </p>
     </section>
     <br>
     <br>
     <!-- <div id="wrapper"> -->
-        <div id="wrapper" ng-repeat="comic in vm.comics | filter: vm.search | orderBy:['-votecount','-num'] | limitTo:30">
+        <div class="animate-repeat" id="wrapper" ng-repeat="comic in vm.comics | filter: vm.search | orderBy:['-votecount','-num'] | limitTo:30">
         <hr>
         <div id="left-div" class="votecounter">
            <img class="votebutton" alt="^" title="vote up"   src="../../images/upvote.png" ng-click="vm.updateComic(comic, true);"/>
