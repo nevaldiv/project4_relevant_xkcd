@@ -1,9 +1,32 @@
-Project4_idea_candidate: RelevantXKCD
-date of inception: April 3 2016
+##Which is the Relevant XKCD?
 
-purpose: a MEAN stack app with the 
-goal of exploring the answer to the phrase:
-"There is a relevant XKCD to every situation" 
-showcasing the lessons we learned in WDI.
+born out of the internet-famous saying that:  
 
-:tada: enjoy.
+>  __There is a relevant XKCD for every 
+>  situation__
+
+
+
+
+Stemming from an idea that I had for Project3, the goal of my app was for a User to be able to find that relevant comic they were looking for.
+
+
+
+
+##Challenges - API
+
+![](https://i.imgur.com/2VhCHSK.png)  
+  
+  
+
+####the API docs for the XKCD webcomic are,.. minimal:
+
+
+
+![docs](https://i.imgur.com/PiGsWfl.png)
+
+
+####and...reading all the comics instead of working.
+
+
+
