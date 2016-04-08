@@ -10,22 +10,25 @@
     </section>
     <br>
     <br>
-      <div ng-repeat="comic in vm.comics | filter: vm.search">
-      <hr>
-      <div class="vote">
-         <img alt="^" title="vote up"   src="../../images/upvote.png" ng-click="vm.updateComic(comic, true);"/>
-         <img alt="v" title="vote down" src="../../images/downvote.png" ng-click="vm.updateComic(comic, false);"/>
+    <!-- <div id="wrapper"> -->
+        <div id="wrapper" ng-repeat="comic in vm.comics | filter: vm.search | orderBy:'-votecount' | limitTo:30">
+        <hr >
+        <div id="left-div" class="votecounter">
+           <img class="votebutton" alt="^" title="vote up"   src="../../images/upvote.png" ng-click="vm.updateComic(comic, true);"/>
+           <div>{{comic.votecount - 100}}</div>
+           <img class="votebutton" alt="v" title="vote down" src="../../images/downvote.png" ng-click="vm.updateComic(comic, false);"/>
+        </div>
+         <div id="right-div" class="comics-content">
+            <p><strong>{{comic.title | uppercase}}</strong></p>
+            <!-- disabling comic-image load for now, until I can get inifite-scroll to work, loading too many images.-->
+            <!-- <img src="{{comic.img}}"> -->
+            <img src="{{comic.img}}" id="comicplaceholder" ng-click="vm.sortBy='thing'; vm.descending=!vm.descending">
+            <p>{{comic.alt}}</p>
+            <p>
+              <small>Month: {{comic.month}}</small> -
+              <small>#{{comic.num}}</small>
+            </p>
+         </div>
       </div>
-       <div class="guts">
-          <p><strong>{{comic.title | uppercase}}</strong></p>
-          <!-- disabling comic-image load for now, until I can get inifite-scroll to work, loading too many images.-->
-          <!-- <img src="{{comic.img}}"> -->
-          <img id="comicplaceholder"></div>
-          <p>{{comic.alt}}</p>
-          <p>
-          <small>Month: {{comic.month}}</small> -
-          <small>#{{comic.num}}</small>
-          </p>
-       </div>
-      </div>
+   <!-- </div> -->
 </div>
