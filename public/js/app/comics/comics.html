@@ -4,15 +4,25 @@
         <p class="col-xs-12">
           <!-- Search field  -->
           <label>Search</label>
-<!--           <input type="checkbox" data-ng-model='search.type1' data-ng-true-value='luxury' data-ng-false-value='' /> Luxury &nbsp;&nbsp;&nbsp;
-          <input type="checkbox" data-ng-model='search.type2' data-ng-true-value='double suite' data-ng-false-value='' /> Double suite
- -->          <input type="search" class="form-control" ng-model="vm.search" placeholder="Keywords from the comic you are searching for...">
+          <input type="search" class="form-control" ng-model="vm.search" placeholder="Keywords from the comic you are searching for...">
         </p>
+          <!-- filter checkbox lists  -->
+        <p>filter by publication year:</p>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2006)"/> 2006</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2007)"/> 2007</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2008)"/> 2008</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2009)"/> 2009</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2010)"/> 2010</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2011)"/> 2011</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2011)"/> 2011</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2012)"/> 2012</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2013)"/> 2013</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2014)"/> 2014</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2015)"/> 2015</div>
+        <div class="yearfilters"><input type="checkbox" ng-click="vm.includeYear(2016)"/> 2016</div>
     </section>
-    <br>
-    <br>
     <!-- <div id="wrapper"> -->
-        <div class="animate-repeat" id="wrapper" ng-repeat="comic in vm.comics | filter: vm.search | orderBy:['-votecount','-num'] | limitTo:30">
+        <div class="animate-repeat" id="wrapper" ng-repeat="comic in vm.comics | filter: vm.search | filter: vm.yearFilter | orderBy:['-votecount','-num'] | limitTo:20">
         <hr>
         <div id="left-div" class="votecounter">
            <img class="votebutton" alt="^" title="vote up"   src="../../images/upvote.png" ng-click="vm.updateComic(comic, true);"/>
