@@ -27,7 +27,7 @@ or if you do, well then you would be pretty rich.  BUT IM NOT (...yet ^^), see, 
 and I do the next best thing, filters! 
 
 ![filters like a motherfucka](https://i.imgur.com/NytZ9ly.png)
-#filtersonfiltersonfilters
+filtersonfiltersonfiltersonfiltersonfilt...
 
 
   
